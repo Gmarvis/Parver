@@ -74,7 +74,7 @@ const Header = () => {
                 <Link
                   href={link.to}
                   key={index}
-                  className="hidden lg:block px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-orange-500"
+                  className="hidden hover:underline duration-300 transition-all lg:block px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-orange-500"
                 >
                   {link.name}
                 </Link>
@@ -91,7 +91,7 @@ const Header = () => {
               <Sun />
             </Button>
 
-            <SignedOut>
+            <SignedOut >
             <Link
               href="/login"
               className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all"
@@ -105,7 +105,6 @@ const Header = () => {
                 Sign Up
               </Button>
             </Link>
-              {/* <SignInButton /> */}
             </SignedOut>
             <SignedIn>
               <UserButton />
