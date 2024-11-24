@@ -1,4 +1,5 @@
-import Header from "~/components/home-layout/header"
+'use client'
+import Header from "~/components/home-layout/header";
 
 export default function Home() {
   return (

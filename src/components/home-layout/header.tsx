@@ -11,6 +11,12 @@ import {
   Sun,
 } from "lucide-react";
 
+import {
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+
 import { useTheme } from "next-themes";
 
 const Header = () => {
@@ -18,8 +24,6 @@ const Header = () => {
   const [scrollActive, setScrollActive] = useState(false);
 
   const { theme, setTheme } = useTheme();
-
-  console.log({ theme });
 
   const links = [
     {
@@ -61,9 +65,7 @@ const Header = () => {
           <div className="col-start-1 col-end-2 flex items-center">
             <Link href="/" className="flex justify-center items-center gap-1">
               <Image src="/parver.png" alt="Logo VPN" height={30} width={30} />
-              <span className="text-black-500 font-semibold ">
-                Parver
-              </span>
+              <span className="text-black-500 font-semibold ">Parver</span>
             </Link>
           </div>
           <ul className="hidden lg:flex col-start-3 col-end-8 text-sm  items-center">
@@ -88,19 +90,28 @@ const Header = () => {
             >
               <Sun />
             </Button>
+
+            <SignedOut>
             <Link
-              href="/"
+              href="/login"
               className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all"
             >
               <Button variant={"ghost"} className="rounded-full sm:px-8 ">
-                Sign In
+                Login
               </Button>
             </Link>
-            <Link href={""}>
+            <Link href={"/sign-up"}>
               <Button variant={"outline"} className="rounded-full sm:px-8  ">
                 Sign Up
               </Button>
             </Link>
+              {/* <SignInButton /> */}
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            
+   
           </div>
         </nav>
       </header>
