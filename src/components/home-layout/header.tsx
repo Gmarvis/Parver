@@ -1,5 +1,3 @@
-"use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -8,23 +6,12 @@ import {
   CircleAlert,
   Earth,
   MessageCircleMore,
-  Sun,
 } from "lucide-react";
 
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
-
-import { useTheme } from "next-themes";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { ThemeButton } from "../ui/theme-button";
 
 const Header = () => {
-  const [activeLink] = useState(null);
-  const [scrollActive, setScrollActive] = useState(false);
-
-  const { theme, setTheme } = useTheme();
-
   const links = [
     {
       name: "About",
@@ -48,19 +35,9 @@ const Header = () => {
     },
   ];
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrollActive(window.scrollY > 20);
-    });
-  }, []);
   return (
     <>
-      <header
-        className={
-          "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
-          (scrollActive ? " shadow-md pt-0" : " pt-4")
-        }
-      >
+      <header className="fixed top-0 w-full  z-30 bg-white-500 transition-all border border-b">
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-4 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
             <Link href="/" className="flex justify-center items-center gap-1">
@@ -83,34 +60,25 @@ const Header = () => {
           </ul>
 
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center transition-all">
-            <Button
-              variant={"ghost"}
-              className="rounded-full"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              <Sun />
-            </Button>
-
-            <SignedOut >
-            <Link
-              href="/login"
-              className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all"
-            >
-              <Button variant={"ghost"} className="rounded-full sm:px-8 ">
-                Login
-              </Button>
-            </Link>
-            <Link href={"/sign-up"}>
-              <Button variant={"outline"} className="rounded-full sm:px-8  ">
-                Sign Up
-              </Button>
-            </Link>
+            <ThemeButton />
+            <SignedOut>
+              <Link
+                href="/login"
+                className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-orange-500 transition-all"
+              >
+                <Button variant={"ghost"} className="rounded-full sm:px-8 ">
+                  Login
+                </Button>
+              </Link>
+              <Link href={"/sign-up"}>
+                <Button variant={"outline"} className="rounded-full sm:px-8  ">
+                  Sign Up
+                </Button>
+              </Link>
             </SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
-            
-   
           </div>
         </nav>
       </header>
@@ -125,10 +93,7 @@ const Header = () => {
                   href={link.to}
                   key={index}
                   className={
-                    "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                    (activeLink === "about"
-                      ? "  border-orange-500 text-orange-500"
-                      : " border-transparent")
+                    "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all border-transparent"
                   }
                 >
                   {link.icon}
