@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 interface WorkSpaceLayoutProps extends PropsWithChildren {
   name: string;
 }
-export function WorkSpaceLayout(props: WorkSpaceLayoutProps) {
+export default function Layout(props: WorkSpaceLayoutProps) {
   return (
     <div className="w-screen flex">
   
@@ -15,4 +15,3 @@ export function WorkSpaceLayout(props: WorkSpaceLayoutProps) {
   );
 }
 
-export default WorkSpaceLayout;
