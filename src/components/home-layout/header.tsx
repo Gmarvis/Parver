@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full  z-30 bg-white-500 transition-all border border-b">
+      <header className="fixed top-0 w-full  z-30 bg-white-500 transition-all shadow-sm">
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-4 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
             <Link href="/" className="flex justify-center items-center gap-1">

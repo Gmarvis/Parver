@@ -1,15 +1,7 @@
-interface WorkSpaceLayoutProps{
-  children: React.ReactNode
-}
-export function WorkSpaceLayout(props: WorkSpaceLayoutProps) {
+export default function WorkSpaceLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className="w-screen flex">
-  
-      <div>
-        {props.children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 }
-
-export default WorkSpaceLayout;
