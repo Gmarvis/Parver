@@ -11,7 +11,7 @@ import {
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { ThemeButton } from "../ui/theme-button";
 
-const Header = () => {
+export function Header(){
   const links = [
     {
       name: "About",
@@ -109,5 +109,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;
