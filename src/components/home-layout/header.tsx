@@ -49,7 +49,7 @@ export function Header() {
           <div className="col-start-1 col-end-2 flex items-center">
             <Link href="/" className="flex items-center gap-0">
               <h3 className={`text-black-500 text-3xl text-brand py-2 flex font-bold ${monoton.className}`}>a</h3>
-              <p className="font-bold text-end mt-2 leading-0">Parver</p>
+              <p className="font-bold text-end mt-2 leading-0">ParVer</p>
             </Link>
           </div>
           <ul className="hidden lg:flex col-start-3  text-sm  items-center">
@@ -58,7 +58,7 @@ export function Header() {
                 <Link
                   href={link.to}
                   key={index}
-                  className="hidden hover:underline duration-300 transition-all px-2 text-start lg:block py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-brand"
+                  className="hidden hover:underline duration-300 transition-all px-2 text-start lg:block py-2 mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-brand gap-1"
                 >
                   {link.name}
                 </Link>
@@ -71,7 +71,7 @@ export function Header() {
             <SignedOut>
               <Link
                 href="/login"
-                className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-brand transition-all"
+                className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-brand gap-1 transition-all"
               >
                 <Button variant={"ghost"} className="rounded-full sm:px-8 ">
                   Login
