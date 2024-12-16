@@ -38,7 +38,7 @@ interface PageHeaderProps {
 export function PageHeader(props: PageHeaderProps) {
   return (
     <div
-      className={cn("flex justify-between items-center border-b-muted py-2")}
+      className={cn("flex flex-col sm:flex-row justify-between  sm:items-center gap-2 py-2")}
     >
       <div>
         <h1 className="text-2xl font-bold">{props.title}</h1>
