@@ -1,5 +1,6 @@
 'use client';
 import { PageHeader, PageLayout, PageSection } from "~/components/layouts/page";
+import { ServiceCard } from "~/components/service/service-card";
 import { SearchInput } from "~/components/ui/SearchInput";
 
 export default function Page() {
@@ -16,7 +17,17 @@ export default function Page() {
         }
       />
       <div className={"flex justify-between gap-4 w-full"}>
-        <PageSection className={"h-[88vh]"}></PageSection>
+        <PageSection className={"h-[88vh]"}>
+          <div className="flex gap-3">
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          <ServiceCard />
+          </div>
+        </PageSection>
       </div>
     </PageLayout>
   );

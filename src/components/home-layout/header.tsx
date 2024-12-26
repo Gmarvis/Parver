@@ -6,17 +6,10 @@ import {
   Earth,
   MessageCircleMore,
 } from "lucide-react";
-
-import { Monoton } from "next/font/google";
-
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { ThemeButton } from "../ui/theme-button";
 
-const monoton = Monoton({
-  weight: "400",
-  subsets: ["latin"],
-  style: ["normal"]
-})
+
 
 export function Header() {
   const links = [
@@ -44,12 +37,11 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 w-full  z-30 bg-white-500 transition-all shadow-sm">
-        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-4 mx-auto grid grid-flow-col py-3 sm:py-4">
+      <header className="fixed top-0 w-full  z-30 bg-white-500 transition-all shadow-sm ">
+        <nav className="max-w-screen-xl px-6 sm:px-6 lg:px-4 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
             <Link href="/" className="flex items-center gap-0">
-              <h3 className={`text-black-500 text-3xl text-brand py-2 flex font-bold ${monoton.className}`}>a</h3>
-              <p className="font-bold text-end mt-2 leading-0">ParVer</p>
+              <p className="font-bold text-end mt-2 leading-0 text-brand text-2xl">ParVer</p>
             </Link>
           </div>
           <ul className="hidden lg:flex col-start-3  text-sm  items-center">
