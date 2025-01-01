@@ -1,13 +1,13 @@
 'use client';
-import { PageHeader, PageLayout, PageSection } from "~/components/layouts/page";
-import { SearchInput } from "~/components/ui/SearchInput";
+import { PageHeader, PageLayout, PageSection } from '~/components/layouts/page';
+import { SearchInput } from '~/components/ui/SearchInput';
 
 export default function Page() {
   return (
     <PageLayout className="flex flex-col gap-2" width="screen">
       <PageHeader
-        title={"Epic Cleaners"}
-        subTitle={"Best cleaning service in Yaounde"}
+        title={'Epic Cleaners'}
+        subTitle={'Best cleaning service in Yaounde'}
         actions={
           <SearchInput
             placeholder="Search Service"
@@ -15,8 +15,8 @@ export default function Page() {
           />
         }
       />
-      <div className={"flex justify-between gap-4 w-full"}>
-        <PageSection className={"h-[88vh]"}></PageSection>
+      <div className={'flex justify-between gap-4 w-full'}>
+        <PageSection className={'h-[88vh]'}></PageSection>
       </div>
     </PageLayout>
   );

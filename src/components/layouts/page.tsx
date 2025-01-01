@@ -1,9 +1,9 @@
-import { PropsWithChildren } from "react";
-import { cn } from "~/lib/utils";
+import { PropsWithChildren } from 'react';
+import { cn } from '~/lib/utils';
 
 export interface PageLayoutProps {
-  width?: "screen" | "narrow";
-  height?: "overflow" | "screen";
+  width?: 'screen' | 'narrow';
+  height?: 'overflow' | 'screen';
   className?: string;
 }
 
@@ -11,11 +11,11 @@ export function PageLayout(props: PropsWithChildren<PageLayoutProps>) {
   return (
     <main
       className={cn(
-        "flex-1 flex flex-col h-full w-full px-4 py-4 lg:px-8 lg:py-4",
+        'flex-1 flex flex-col h-full w-full px-4 py-4 lg:px-8 lg:py-4',
         {
-          "max-w-6xl mx-auto": props.width === "narrow",
-          "h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)]":
-            props.height === "screen",
+          'max-w-6xl mx-auto': props.width === 'narrow',
+          'h-[calc(100svh-1rem)] max-h-[calc(100svh-1rem)]':
+            props.height === 'screen'
         },
         props.className
       )}
@@ -38,7 +38,9 @@ interface PageHeaderProps {
 export function PageHeader(props: PageHeaderProps) {
   return (
     <div
-      className={cn("flex flex-col sm:flex-row justify-between  sm:items-center gap-2 py-2")}
+      className={cn(
+        'flex flex-col sm:flex-row justify-between  sm:items-center gap-2 py-2'
+      )}
     >
       <div>
         <h1 className="text-2xl font-bold">{props.title}</h1>
@@ -61,7 +63,7 @@ export function PageSection(props: PropsWithChildren<{ className?: string }>) {
   return (
     <div
       className={cn(
-        "border border-1-border w-full  p-2 rounded-md",
+        'border border-1-border w-full  p-2 rounded-md',
         props.className
       )}
     >
