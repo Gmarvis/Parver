@@ -1,8 +1,8 @@
-"use client";
-import React from "react";
-import { Input } from "./input";
-import { Search } from "lucide-react";
-import { cn } from "~/lib/utils";
+'use client';
+import React from 'react';
+import { Input } from './input';
+import { Search } from 'lucide-react';
+import { cn } from '~/lib/utils';
 
 interface SearchInputProps {
   placeholder?: string;
@@ -15,7 +15,7 @@ const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
     return (
       <div
         className={cn(
-          "relative flex justify-center items-center border px-2 sm:min-w-96 w-full rounded-sm ",
+          'relative flex justify-center items-center border px-2 sm:min-w-96 w-full rounded-sm ',
           className
         )}
       >
@@ -31,5 +31,5 @@ const SearchInput = React.forwardRef<HTMLInputElement, SearchInputProps>(
   }
 );
 
-SearchInput.displayName = "SearchInput";
+SearchInput.displayName = 'SearchInput';
 export { SearchInput };

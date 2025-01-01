@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "~/components/theme-provider";
-import { ClerkProvider } from "@clerk/nextjs";
+import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
+import './globals.css';
+import { ThemeProvider } from '~/components/theme-provider';
+import { ClerkProvider } from '@clerk/nextjs';
 
 const poppins = Roboto({
-  weight: "400",
-  subsets: ["latin"],
+  weight: '400',
+  subsets: ['latin']
 });
 
 export const metadata: Metadata = {
-  title: "Parver",
-  description: "Next generation of web development",
+  title: 'Parver',
+  description: 'Next generation of web development'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

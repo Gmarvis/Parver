@@ -11,9 +11,9 @@ export interface Appointment {
 }
 
 export enum AppointmentStatus {
-  PENDING = "pending",
-  APPROVED = "approved",
-  CANCELLED = "cancelled",
-  COMPLETED = "completed",
-  REJECTED = "rejected",
+  PENDING = 'pending',
+  APPROVED = 'approved',
+  CANCELLED = 'cancelled',
+  COMPLETED = 'completed',
+  REJECTED = 'rejected'
 }
